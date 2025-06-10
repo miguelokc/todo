@@ -5,7 +5,6 @@ const tasks = document.getElementById('tasks');
 
 button.addEventListener('click',()=>{
     const btn = document.createElement('button');
-    
     const text = bar.innerText.trim();
     if (text !== ""){
         const task = document.createElement('div');
@@ -25,6 +24,16 @@ button.addEventListener('click',()=>{
         })
         edit.innerText = 'Edit';
         task.appendChild(edit);
+        edit.addEventListener('click', () =>{
+            if (edit.innerText == 'Edit'){
+                span.contentEditable = true;
+                span.focus();
+                edit.innerText = 'Save';
+            }else {
+                span.contentEditable = false;
+                edit.innerText = 'Edit';
+            }
+        } )
         bar.innerText = "";
     }
 });
