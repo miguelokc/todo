@@ -17,13 +17,11 @@ button.addEventListener('click',()=>{
         task.appendChild(span);
         task.className = 'task';
         tasks.appendChild(task);
-        btn.innerText = 'delete';
-        task.appendChild(btn);
+        btn.innerText = 'Delete';
         btn.addEventListener('click',()=>{
             task.remove();
         })
         edit.innerText = 'Edit';
-        task.appendChild(edit);
         edit.addEventListener('click', () =>{
             if (edit.innerText == 'Edit'){
                 span.contentEditable = true;
@@ -34,6 +32,11 @@ button.addEventListener('click',()=>{
                 edit.innerText = 'Edit';
             }
         } )
+
+        const buttonGroup = document.createElement('div');
+        buttonGroup.appendChild(edit);
+        buttonGroup.appendChild(btn);
+        task.appendChild(buttonGroup)
         bar.innerText = "";
     }
 });
