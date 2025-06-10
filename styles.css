@@ -4,3 +4,27 @@ body{
     align-items: center;
     flex-direction: column;
 }
+#title{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#white{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#bar{
+    width: 400px;
+    height: 20px;
+    border: 1px solid black;
+}
+#list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#tasks{
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+}
